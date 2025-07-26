@@ -51,11 +51,6 @@
   </style>
 </head>
 <body>
-  <header>
-    <img src="BMV PTSA Logo Blue Cropped.jpg" alt="Beachside PTSA Logo" />
-    <h1>Financials & Transparency</h1>
-  </header>
-
   <div id="navbar"></div>
   <script>
     fetch('navbar.html')
@@ -66,13 +61,21 @@
         return res.text();
       })
       .then(html => {
-        document.getElementById('navbar').innerHTML = html;
+        const navbarContainer = document.getElementById('navbar');
+        navbarContainer.innerHTML = html;
+        navbarContainer.querySelector('nav').style.width = '100%';
+        navbarContainer.querySelector('nav').style.boxSizing = 'border-box';
       })
       .catch(error => {
         console.error('Error loading navbar:', error);
-        document.getElementById('navbar').innerHTML = '<nav style="background:#005fa3;color:white;text-align:center;padding:1rem">Navbar failed to load</nav>';
+        document.getElementById('navbar').innerHTML = '<nav style="background:#005fa3;color:white;text-align:center;padding:1rem;width:100%;box-sizing:border-box">Navbar failed to load</nav>';
       });
   </script>
+
+  <header>
+    <img src="BMV PTSA Logo Blue Cropped.jpg" alt="Beachside PTSA Logo" />
+    <h1>Financials & Transparency</h1>
+  </header>
 
   <section class="section">
     <h2>PTSA Budget Overview</h2>
