@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Beachside Montessori PTSA</title>
   <link rel="icon" type="image/jpeg" href="BMV PTSA Logo Blue Cropped.jpg" />
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
       background: linear-gradient(to bottom, #fff8e7, #e6f2ff);
       color: #003366;
@@ -68,14 +69,14 @@
     <h1>About Beachside Montessori Village PTSA</h1>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="join.html">Join</a>
-    <a href="events.html">Events</a>
-    <a href="volunteer.html">Volunteer</a>
-    <a href="https://bmv.givebacks.com/calendar" target="_blank" rel="noopener noreferrer">Contact</a>
-  </nav>
+  <div id="navbar"></div>
+  <script>
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar').innerHTML = html;
+      });
+  </script>
 
   <section class="section">
     <h2>Who We Are</h2>
@@ -91,10 +92,24 @@
       <li>Promote student enrichment and engagement</li>
       <li>Build community among students, families, and staff</li>
     </ul>
+    <h2>Meet the Board</h2>
+    <ul>
+      <li>President – Jane Doe (<a href="mailto:president@bmvptsa.org">president@bmvptsa.org</a>)</li>
+      <li>Vice President – John Smith</li>
+      <li>Treasurer – Maria Gonzalez</li>
+      <li>Secretary – David Lee</li>
+      <!-- Add photos and additional roles as needed -->
+    </ul>
+
+    <h2>Bylaws & Policies</h2>
+    <p>Our PTSA operates under a set of bylaws filed with Florida PTA. <em>(Coming soon: downloadable PDF)</em></p>
+
+    <h2>PTSA Accomplishments</h2>
+    <p>We are proud to have funded teacher appreciation events, student assemblies, and classroom technology upgrades. <em>More highlights and photos coming soon!</em></p>
   </section>
 
   <footer>
-    <p>Beachside Montessori Village | Hollywood, FL | beachsideptsa@outlook.com</p>
+    <p>Beachside Montessori Village | Hollywood, FL | president@bmvptsa.org</p>
     <div class="social-icons">
       <a href="https://www.facebook.com/groups/bmvptsa" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
