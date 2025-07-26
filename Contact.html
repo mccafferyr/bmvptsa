@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Beachside Montessori PTSA</title>
   <link rel="icon" type="image/jpeg" href="BMV PTSA Logo Blue Cropped.jpg" />
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
       background: linear-gradient(to bottom, #fff8e7, #e6f2ff);
       color: #003366;
@@ -78,14 +79,14 @@
     <h1>Contact Beachside Montessori Village PTSA</h1>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="join.html">Join</a>
-    <a href="events.html">Events</a>
-    <a href="volunteer.html">Volunteer</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <div id="navbar"></div>
+  <script>
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar').innerHTML = html;
+      });
+  </script>
 
   <section class="section">
     <div class="contact-info">
@@ -96,6 +97,28 @@
         <a href="https://www.facebook.com/groups/bmvptsa" target="_blank" rel="noopener noreferrer">Facebook Group</a> |
         <a href="https://www.instagram.com/bmv_ptsa/" target="_blank" rel="noopener noreferrer">Instagram</a>
       </p>
+    </div>
+      <form action="mailto:president@bmvptsa.org" method="post" enctype="text/plain" style="max-width:600px;margin:0 auto;text-align:left">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" style="width:100%;padding:0.5rem;margin-bottom:1rem"><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" style="width:100%;padding:0.5rem;margin-bottom:1rem"><br>
+
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="6" style="width:100%;padding:0.5rem;margin-bottom:1rem"></textarea><br>
+
+      <input type="submit" value="Send" style="background-color:#005fa3;color:white;padding:0.75rem 1.5rem;border:none;border-radius:0.5rem;cursor:pointer">
+    </form>
+
+    <hr style="margin:2rem auto;max-width:600px">
+
+    <div style="text-align:center">
+      <h2>Board Directory</h2>
+      <p><em>Full board contact list coming soon</em></p>
+
+      <h2>Mailing Address</h2>
+      <p>Beachside Montessori Village PTSA<br>2230 Lincoln Street<br>Hollywood, FL 33020</p>
     </div>
   </section>
 
