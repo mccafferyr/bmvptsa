@@ -60,20 +60,11 @@
   </header>
 
   <div id="navbar"></div>
-  <script>
+    <script>
     fetch('navbar.html')
-      .then(res => {
-        if (!res.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return res.text();
-      })
+      .then(res => res.text())
       .then(html => {
         document.getElementById('navbar').innerHTML = html;
-      })
-      .catch(error => {
-        console.error('Error loading navbar:', error);
-        document.getElementById('navbar').innerHTML = '<nav style="background:#005fa3;color:white;text-align:center;padding:1rem">Navbar failed to load</nav>';
       });
   </script>
 
