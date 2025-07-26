@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Financials & Transparency | Beachside Montessori PTSA</title>
+  <link rel="icon" type="image/jpeg" href="BMV PTSA Logo Blue Cropped.jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: linear-gradient(to bottom, #fff8e7, #e6f2ff);
+      color: #003366;
+    }
+    header {
+      background-color: #ffffff;
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+    }
+    header img {
+      max-height: 100px;
+      margin-bottom: 0.5rem;
+    }
+    .section {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: #ffffff;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .section h2 {
+      color: #005fa3;
+    }
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+    }
+    .social-icons a {
+      margin: 0 0.5rem;
+    }
+    .social-icons img {
+      width: 32px;
+      height: 32px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="BMV PTSA Logo Blue Cropped.jpg" alt="Beachside PTSA Logo" />
+    <h1>Financials & Transparency</h1>
+  </header>
+
+  <div id="navbar"></div>
+  <script>
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar').innerHTML = html;
+      });
+  </script>
+
+  <section class="section">
+    <h2>PTSA Budget Overview</h2>
+    <p>We believe in full transparency. Our approved budget is shared here for reference and updated as needed.</p>
+    <p><em>2025–26 Budget document coming soon</em></p>
+
+    <h2>Meeting Minutes</h2>
+    <p>Minutes from our general and board meetings will be posted here.</p>
+    <p><em>Meeting minutes archive coming soon</em></p>
+
+    <h2>990s and Audit Reports</h2>
+    <p>Annual financial filings and audit summaries will be published for community review.</p>
+    <p><em>Files coming soon</em></p>
+
+    <h2>Expenditure Requests</h2>
+    <p>If you’re a teacher or committee chair requesting funds, please use the form below.</p>
+    <p><em>Online form and process instructions coming soon</em></p>
+  </section>
+
+  <footer>
+    <p>Beachside Montessori Village | Hollywood, FL | president@bmvptsa.org</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/groups/bmvptsa" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
+      </a>
+      <a href="https://www.instagram.com/bmv_ptsa/" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
+      </a>
+    </div>
+    <p>&copy; 2025 Beachside PTSA. All rights reserved.</p>
+  </footer>
+</body>
+</html>
