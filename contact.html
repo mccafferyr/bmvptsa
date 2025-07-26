@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Beachside Montessori PTSA</title>
+  <link rel="icon" type="image/jpeg" href="BMV PTSA Logo Blue Cropped.jpg" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: linear-gradient(to bottom, #fff8e7, #e6f2ff);
+      color: #003366;
+    }
+    header {
+      background-color: #ffffff;
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+    }
+    header img {
+      max-height: 100px;
+      margin-bottom: 0.5rem;
+    }
+    nav {
+      background-color: #005fa3;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 1rem;
+      display: block;
+    }
+    nav a:hover {
+      background-color: #ffcc00;
+      color: #003366;
+    }
+    .section {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: #ffffff;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .contact-info {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .contact-info a {
+      color: #005fa3;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+    }
+    .social-icons a {
+      margin: 0 0.5rem;
+    }
+    .social-icons img {
+      width: 32px;
+      height: 32px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="BMV PTSA Logo Blue Cropped.jpg" alt="Beachside PTSA Logo" />
+    <h1>Contact Beachside Montessori Village PTSA</h1>
+  </header>
+
+  <div id="navbar"></div>
+  <script>
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar').innerHTML = html;
+      });
+  </script>
+
+  <section class="section">
+    <div class="contact-info">
+      <p>Have questions, ideas, or want to get involved?</p>
+      <p>Email us at <a href="mailto:president@bmvptsa.org">president@bmvptsa.org</a></p>
+      <p>Follow us for updates and announcements:</p>
+      <p>
+        <a href="https://www.facebook.com/groups/bmvptsa" target="_blank" rel="noopener noreferrer">Facebook Group</a> |
+        <a href="https://www.instagram.com/bmv_ptsa/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </p>
+    </div>
+      <form action="mailto:president@bmvptsa.org" method="post" enctype="text/plain" style="max-width:600px;margin:0 auto;text-align:left">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" style="width:100%;padding:0.5rem;margin-bottom:1rem"><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" style="width:100%;padding:0.5rem;margin-bottom:1rem"><br>
+
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="6" style="width:100%;padding:0.5rem;margin-bottom:1rem"></textarea><br>
+
+      <input type="submit" value="Send" style="background-color:#005fa3;color:white;padding:0.75rem 1.5rem;border:none;border-radius:0.5rem;cursor:pointer">
+    </form>
+
+    <hr style="margin:2rem auto;max-width:600px">
+
+    <div style="text-align:center">
+      <h2>Board Directory</h2>
+      <p><em>Full board contact list coming soon</em></p>
+
+      <h2>Mailing Address</h2>
+      <p>Beachside Montessori Village PTSA<br>2230 Lincoln Street<br>Hollywood, FL 33020</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Beachside Montessori Village | Hollywood, FL | president@bmvptsa.org</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/groups/bmvptsa" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
+      </a>
+      <a href="https://www.instagram.com/bmv_ptsa/" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
+      </a>
+    </div>
+    <p>&copy; 2025 Beachside PTSA. All rights reserved.</p>
+  </footer>
+</body>
+</html>
