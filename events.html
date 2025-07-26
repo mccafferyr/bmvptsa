@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Events | Beachside Montessori PTSA</title>
   <link rel="icon" type="image/jpeg" href="BMV PTSA Logo Blue Cropped.jpg" />
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
       background: linear-gradient(to bottom, #fff8e7, #e6f2ff);
       color: #003366;
@@ -82,14 +83,14 @@
     <h1>PTSA Events Calendar</h1>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="join.html">Join</a>
-    <a href="events.html">Events</a>
-    <a href="volunteer.html">Volunteer</a>
-    <a href="https://bmv.givebacks.com/calendar" target="_blank" rel="noopener noreferrer">Contact</a>
-  </nav>
+  <div id="navbar"></div>
+  <script>
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar').innerHTML = html;
+      });
+  </script>
 
   <section class="section">
     <h2>Upcoming Events</h2>
@@ -102,10 +103,26 @@
       <p>Visit the full calendar on Givebacks:</p>
       <a href="https://bmv.givebacks.com/calendar/" target="_blank" rel="noopener noreferrer">Event Calendar</a>
     </div>
+    <h2>Signature Events</h2>
+    <ul>
+      <li>🎃 Fall Festival</li>
+      <li>📚 Book Fair</li>
+      <li>🎨 Reflections Art Program</li>
+      <li>👨‍👩‍👧‍👦 Family Nights</li>
+    </ul>
+
+    <h2>Enrichment & Programs</h2>
+    <p>Beachside PTSA supports a range of programs to enhance student learning and well-being:</p>
+    <ul>
+      <li>✅ Academic support initiatives</li>
+      <li>🎤 Assemblies and cultural programs</li>
+      <li>📱 PTA Connected – Digital safety and wellness workshops</li>
+      <li>🧠 SEL resources and activities</li>
+    </ul>
   </section>
 
   <footer>
-    <p>Beachside Montessori Village | Hollywood, FL | beachsideptsa@outlook.com</p>
+    <p>Beachside Montessori Village | Hollywood, FL | president@bmvptsa.org</p>
     <div class="social-icons">
       <a href="https://www.facebook.com/groups/bmvptsa" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
