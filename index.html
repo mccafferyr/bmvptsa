@@ -90,6 +90,31 @@
     .card a:hover {
       background-color: #e6b800;
     }
+    .sponsor-banner {
+      background-color: #fff0b3;
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 1rem 0;
+    }
+    .sponsor-scroll {
+      display: inline-block;
+      animation: scroll-left 30s linear infinite;
+    }
+    .sponsor-scroll:hover {
+      animation-play-state: paused;
+    }
+    .sponsor-scroll a {
+      display: inline-block;
+      margin: 0 2rem;
+    }
+    .sponsor-scroll img {
+      height: 40px;
+      vertical-align: middle;
+    }
+    @keyframes scroll-left {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
     footer {
       background-color: #003366;
       color: white;
@@ -135,6 +160,26 @@
     <h2>Welcome to the 2025–2026 School Year!</h2>
     <p>Join our PTSA and help us make this the best year yet.</p>
   </div>
+
+  <div class="sponsor-banner">
+  <div class="sponsor-scroll">
+    <a href="https://guetteinsurance.com/" target="_blank">
+      <img src="guette_insurance.png" alt="Guette Insurance & Financial" />
+    </a>
+    <a href="https://crabs.com/" target="_blank">
+      <img src="billys_stone_crab.png" alt="Billy's Stone Crab Restaurant" />
+    </a>
+    <a href="https://miamiboatsrental.com" target="_blank">
+      <img src="miami_boats_rental.png" alt="Miami Boats Rental" />
+    </a>
+    <a href="https://bewellmedspa.com/" target="_blank">
+      <img src="bewell_medspa.png" alt="BeWell MedSpa" />
+    </a>
+    <a href="https://www.campdaytrippers.com/" target="_blank">
+      <img src="daytrippers_jaacd_up.png" alt="Daytrippers / JAAC'D Up Sports" />
+    </a>
+  </div>
+</div>
 
   <section class="section" id="quick-links">
     <h2>Quick Links</h2>
