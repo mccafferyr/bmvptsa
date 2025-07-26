@@ -7,7 +7,7 @@
   <link rel="icon" type="image/jpeg" href="BMV PTSA Logo Blue Cropped.jpg" />
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
       background: linear-gradient(to bottom, #fff8e7, #e6f2ff);
     }
@@ -148,13 +148,14 @@
     <p>Every child. One voice. United for student success.</p>
   </header>
 
-  <nav>
-    <a href="about.html">About</a>
-    <a href="join.html">Join</a>
-    <a href="events.html">Events</a>
-    <a href="volunteer.html">Volunteer</a>
-    <a href="#contact" target="_blank" rel="noopener noreferrer">Contact</a>
-  </nav>
+  <div id="navbar"></div>
+  <script>
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar').innerHTML = html;
+      });
+  </script>
 
   <div class="hero">
     <h2>Welcome to the 2025–2026 School Year!</h2>
@@ -208,8 +209,37 @@
     </div>
   </section>
 
+  <section class="section" id="announcements">
+    <h2>Announcements</h2>
+    <p>🎉 Membership drive is now open! 🎉</p>
+    <p>🗓️ Save the date: Fall Festival – Coming Soon</p>
+  </section>
+
+  <section class="section" id="upcoming-events">
+    <h2>Upcoming Events</h2>
+    <ul>
+      <li>First General PTSA Meeting – Coming Soon</li>
+      <li>Spirit Shirt Pickup – Coming Soon</li>
+    </ul>
+    <p><a href="https://bmv.givebacks.com/calendar" target="_blank" rel="noopener noreferrer">View Full Calendar</a></p>
+  </section>
+
+  <section class="section" id="social-signup">
+    <h2>Stay Connected</h2>
+    <p>Follow us on Facebook and Instagram for the latest updates:</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/groups/bmvptsa" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
+      </a>
+      <a href="https://www.instagram.com/bmv_ptsa/" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
+      </a>
+    </div>
+    <p>📧 Email list signup – Coming Soon</p>
+  </section>
+
   <footer>
-    <p>Beachside Montessori Village | Hollywood, FL | beachsideptsa@outlook.com</p>
+    <p>Beachside Montessori Village | Hollywood, FL | president@bmvptsa.org</p>
     <div class="social-icons">
       <a href="https://www.facebook.com/groups/bmvptsa" target="_blank" rel="noopener noreferrer">
         <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
